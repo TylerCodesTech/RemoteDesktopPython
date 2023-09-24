@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Desktop</title>
+</head>
+<body>
+    <h1>Remote Desktop</h1>
+    <form method="POST" action="/control">
+        <input type="text" name="ip_address" placeholder="Enter Remote IP" value="{{ remote_ip }}">
+        <button type="submit" name="action" value="set_ip">Set IP</button>
+    </form>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    <form method="POST" action="/control">
+        <button type="submit" name="action" value="click">Click</button>
+        <button type="submit" name="action" value="scrollup">Scroll Up</button>
+        <button type="submit" name="action" value="scrolldown">Scroll Down</button>
+        <button type="submit" name="action" value="quit">Quit</button>
+    </form>
+</body>
+</html>
